@@ -1,0 +1,2 @@
+Export-Package com.peergreen.naming.*;version=${project.version}
+Private-Package com.peergreen.naming.internal.*

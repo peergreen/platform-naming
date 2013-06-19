@@ -20,7 +20,7 @@
   <parent>
     <groupId>com.peergreen.naming</groupId>
     <artifactId>peergreen-naming</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
   </parent>
   <artifactId>peergreen-naming-api</artifactId>
   <packaging>bundle</packaging>

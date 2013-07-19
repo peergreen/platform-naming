@@ -107,9 +107,8 @@ public class DefaultJavaNamingManager implements JavaNamingManager {
             }
         }
 
-
-
-        return context;
+        // return an empty java URL context for component that are not yet registered
+        return new JavaURLContext(this);
     }
 
 }

@@ -1,1 +1,0 @@
-Export-Package com.peergreen.naming.*;version=${project.version}

@@ -15,7 +15,7 @@
   <parent>
     <groupId>com.peergreen.naming</groupId>
     <artifactId>peergreen-naming</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2-SNAPSHOT</version>
   </parent>
   <artifactId>peergreen-naming-api</artifactId>
   <packaging>bundle</packaging>

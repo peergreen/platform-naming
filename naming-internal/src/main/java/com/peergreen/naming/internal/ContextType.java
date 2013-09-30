@@ -27,6 +27,11 @@ public enum ContextType {
         this.value = value;
     }
 
+    public String getName() {
+        return value;
+    }
+
+
     @Override
     public String toString() {
         return value;

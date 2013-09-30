@@ -97,10 +97,10 @@ public class DefaultJavaContextFactory implements JavaContextFactory {
         ContextImpl ctx = new ContextImpl(name);
 
         // Create subContext
-        ContextImpl compCtx = (ContextImpl) ctx.createSubcontext(COMP.name());
+        ContextImpl compCtx = (ContextImpl) ctx.createSubcontext(COMP.getName());
 
         // Add global
-        ctx.addBinding(GLOBAL.name(), globalContext);
+        ctx.addBinding(GLOBAL.getName(), globalContext);
 
         // module may use comp context
         Context moduleCtx = null;
@@ -109,7 +109,7 @@ public class DefaultJavaContextFactory implements JavaContextFactory {
         } else {
             moduleCtx = javaModuleContext;
         }
-        ctx.addBinding(MODULE.name(), moduleCtx);
+        ctx.addBinding(MODULE.getName(), moduleCtx);
 
 
         // App context (if not defined, reuse module context)
@@ -120,7 +120,7 @@ public class DefaultJavaContextFactory implements JavaContextFactory {
             appCtx = javaAppContext;
         }
 
-        ctx.addBinding(APP.name(), appCtx);
+        ctx.addBinding(APP.getName(), appCtx);
 
         // Apply listeners
         for (JavaContextFactoryListener listener : listeners) {

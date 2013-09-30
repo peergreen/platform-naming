@@ -37,6 +37,7 @@ import javax.naming.NotContextException;
 import javax.naming.OperationNotSupportedException;
 import javax.naming.RefAddr;
 import javax.naming.Reference;
+import javax.naming.Referenceable;
 
 /**
  * Implementation of Context interface.
@@ -166,11 +167,10 @@ public class ContextImpl implements Context {
                 ne.setRootCause(e);
                 throw ne;
             }
-        } else if (ret instanceof Reference) {
+        } else if (ret instanceof Reference || ret instanceof Referenceable) {
             // Use NamingManager to build an object
             try {
-                Object o = javax.naming.spi.NamingManager.getObjectInstance(ret, n, this, this.environment);
-                ret = o;
+                ret = javax.naming.spi.NamingManager.getObjectInstance(ret, n, this, this.environment);
             } catch (NamingException e) {
                 throw e;
             } catch (Exception e) {

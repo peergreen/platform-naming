@@ -666,7 +666,7 @@ public class ContextImpl implements Context {
     private Context lookupCtx(final String name) throws NamingException {
         Object obj = this.bindings.get(name);
         if (obj == null) {
-            throw new NameNotFoundException();
+            throw new NameNotFoundException("No subcontext named '" + name + "' has been found");
         }
         if (obj instanceof Context) {
             return (Context) obj;

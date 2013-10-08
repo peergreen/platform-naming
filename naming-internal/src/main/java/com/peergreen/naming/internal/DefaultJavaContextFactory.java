@@ -77,7 +77,9 @@ public class DefaultJavaContextFactory implements JavaContextFactory {
 
     @Override
     public Context createContext(String name) throws NamingException {
-        return createContext(name, null, null);
+        // Create a new environment
+        ContextImpl ctx = new ContextImpl(name);
+        return ctx;
     }
 
     @Bind(optional=true, aggregate=true)

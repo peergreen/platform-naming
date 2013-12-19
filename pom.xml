@@ -20,14 +20,14 @@
   <groupId>com.peergreen.naming</groupId>
   <artifactId>peergreen-naming</artifactId>
   <packaging>pom</packaging>
-  <version>1.0.2</version>
+  <version>1.0.3-SNAPSHOT</version>
   <name>Peergreen naming</name>
 
   <scm>
     <connection>scm:git:https://forge.peergreen.com/git/git/platform/naming.git</connection>
     <developerConnection>scm:git:https://forge.peergreen.com/git/git/platform/naming.git</developerConnection>
     <url>https://forge.peergreen.com/git/summary/?r=platform/naming.git</url>
-    <tag>PEERGREEN_NAMING_1_0_2</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <modules>
